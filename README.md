@@ -6,7 +6,7 @@ Aim training game using ReactJS
 
 To run this project, install it locally using npm:
 ```
-$ cd ./aim-react
+$ cd ./aim-react-main
 
 $ npm install
 
