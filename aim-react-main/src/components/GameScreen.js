@@ -3,7 +3,7 @@ import Score from "./Score";
 import Timer from "./Timer";
 import target from "../imgs/target.png";
 
-const NUM_SECONDS = 30;
+const NUM_SECONDS = 60;
 let timer;
 
 const Game = ({ setScore, score, endGame }) => {
