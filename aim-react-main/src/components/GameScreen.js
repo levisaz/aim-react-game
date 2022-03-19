@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import Score from "./Score";
 import Timer from "./Timer";
 import target from "../imgs/target.png";
+import HitSound from "../audio/hitsound.wav";
+import {Howl, Howler} from 'howler';
 
 const NUM_SECONDS = 60;
 let timer;
@@ -26,8 +28,21 @@ const Game = ({ setScore, score, endGame }) => {
       y: `${y}px`,
     };
   }
+  
+
+  const soundSrc = HitSound;
+  const SoundPlay = (src) => {
+    const sound = new Howl({
+      src
+    })
+    sound.play()
+  }
+
+  
 
   const handleTargetClick = () => {
+    Howler.volume(0.2);
+    SoundPlay(soundSrc);
     setScore((score) => score + 1);
   };
 
