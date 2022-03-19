@@ -1,5 +1,3 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/9089be57-bbfe-467a-bbf7-00f41f118ad5/deploy-status)](https://app.netlify.com/sites/neilsaim/deploys)
-
 ## Aim game
 
 - [General info](#general-info)
@@ -15,19 +13,14 @@ This repository holds the source code for a web game. The objective is to shoot 
 Project is created with:
 
 - React: 17.0.2
+- Howler: 2.2.3
 
 ## Setup
 
 To run this project, install it locally using npm:
 
 ```
-$ cd ./aim-react
+$ cd ./aim-react-main
 $ npm install
 $ npm start
 ```
-
-## Demo
-
-The live demo is deployed on Netlify: https://neilsaim.netlify.com/
-
-![Homepage screenshot](screenshot.png)
