@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Score from "./Score";
 import Timer from "./Timer";
-import target from "./target.png";
+import target from "../imgs/target.png";
 
 const NUM_SECONDS = 30;
 let timer;

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import StartScreen from "./StartScreen";
-import GameScreen from "./GameScreen";
+import StartScreen from "./components/StartScreen";
+import GameScreen from "./components/GameScreen";
 import "./App.css";
 
 function App() {
