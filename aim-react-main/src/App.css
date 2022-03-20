@@ -1,58 +1,75 @@
 @import url("https://fonts.googleapis.com/css?family=Press+Start+2P&display=swap");
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    font-family: "Press Start 2P";
+  margin: 0;
+  font-family: "Bungee";
 }
 
 main {
-    height: 100vh;
+  height: 100vh;
 }
 
 img {
-    position: absolute;
+  position: absolute;
 }
 
 button {
-    font-family: inherit;
-    font-size: 2rem;
-    background-color: white;
-    border: 10px solid black;
-    padding: 1.5rem 1rem;
-    cursor: pointer;
+  font-family: inherit;
+  font-size: 2rem;
+  border: 5px solid #591fcc;
+  background-color: white;
+  border-radius: 25px;
+  padding: 0.2rem 0.5rem;
+  cursor: pointer;
+  font-family: "Bungee";
+  width: 20%;
+  color: #591fcc;
+}
+
+button:hover {
+  background-color: #591fcc;
+  color: white;
 }
 
 .startScreen {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    gap: 3rem;
-    background-image: url(./imgs/main-bg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 3rem;
+  background-image: url(./imgs/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .gameScreen {
-    cursor: crosshair;
-    background-image: url(./imgs/main-bg.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
+  cursor: crosshair;
+  background-image: url(./imgs/main-bg.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .score,
 .timer,
 .intro {
-    font-size: 2rem;
-    font-weight: bold;
-    padding: 1rem;
+  font-size: 2.2rem;
+  font-weight: bold;
+  padding: 0rem 1rem;
+  color: white;
 }
 
 .intro {
-    max-width: 40rem;
+  /* max-width: 40rem;  */
+  max-width: 60rem;
+  line-height: 5rem;
+
+  font-size: 55px;
+  text-align: center;
+  filter: drop-shadow(0px 1px 6px #ffffff);
+  color: #7703d6;
 }

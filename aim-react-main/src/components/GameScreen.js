@@ -1,12 +1,19 @@
 import { useEffect, useState } from "react";
 import Score from "./Score";
 import Timer from "./Timer";
-import target from "../imgs/target.png";
+import target1 from "../imgs/target.png";
+import owl from "../imgs/owl.png";
+import rocket from "../imgs/rocket.png";
+import alien from "../imgs/alien.png";
+import moon from "../imgs/moon.png";
+import helicopter from "../imgs/helicopter.png";
+
 import HitSound from "../audio/hitsound.wav";
-import {Howl, Howler} from 'howler';
+import { Howl, Howler } from "howler";
 
 const NUM_SECONDS = 60;
-let timer;
+let timer, target;
+let images = [target1, owl, rocket, alien, moon, helicopter];
 
 const Game = ({ setScore, score, endGame }) => {
   const [seconds, setSeconds] = useState(NUM_SECONDS);
@@ -28,17 +35,14 @@ const Game = ({ setScore, score, endGame }) => {
       y: `${y}px`,
     };
   }
-  
 
   const soundSrc = HitSound;
   const SoundPlay = (src) => {
     const sound = new Howl({
-      src
-    })
-    sound.play()
-  }
-
-  
+      src,
+    });
+    sound.play();
+  };
 
   const handleTargetClick = () => {
     Howler.volume(0.2);
@@ -57,6 +61,7 @@ const Game = ({ setScore, score, endGame }) => {
   };
 
   useEffect(() => {
+    target = images[Math.floor(Math.random() * 5) + 1];
     const position = getRandomPosition();
     setPosition({
       x: position.x,
@@ -76,6 +81,7 @@ const Game = ({ setScore, score, endGame }) => {
     <main className="gameScreen">
       <Score score={score} />
       <Timer seconds={seconds} />
+
       <img
         width="50"
         src={target}
@@ -86,6 +92,7 @@ const Game = ({ setScore, score, endGame }) => {
         onClick={handleTargetClick}
         alt="target"
       />
+      {console.log(target)}
     </main>
   );
 };
