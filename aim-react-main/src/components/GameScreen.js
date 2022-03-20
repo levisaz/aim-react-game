@@ -43,7 +43,12 @@ const Game = ({ setScore, score, endGame }) => {
     });
     sound.play();
   };
-
+  const StopSound = (src) => {
+    const sound = new Howl({
+      src,
+    });
+    sound.stop();
+  }
   const handleTargetClick = () => {
     Howler.volume(0.2);
     SoundPlay(soundSrc);
@@ -54,7 +59,11 @@ const Game = ({ setScore, score, endGame }) => {
     setSeconds((seconds) => {
       let total = seconds - 1;
 
-      if (total === 0) endGame();
+      if (total === 0){
+        StopSound(soundSrc);
+        endGame();
+        
+      }  
 
       return total;
     });

@@ -6,6 +6,8 @@ const StartScreen = ({ startGame, score }) => {
   const SoundPlay = (src) => {
     const sound = new Howl({
       src,
+      autoplay: true,
+      loop: true,
     });
     Howler.volume(0.2);
     sound.play();
@@ -15,7 +17,7 @@ const StartScreen = ({ startGame, score }) => {
       <main className="startScreen">
         {score > 0 && (
           <div className="intro">
-            {SoundPlay(soundSrc)}Congratulations! <br />
+            Congratulations! <br />
             you got {score}
           </div>
         )}
