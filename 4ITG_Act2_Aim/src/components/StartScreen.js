@@ -24,7 +24,7 @@ const StartScreen = ({ startGame, score }) => {
         {score <= 0 && (
           <div className="intro">
             {SoundPlay(soundSrc)}
-            You get 60 seconds to shoot as many targets as you can!
+            You got 60 seconds to shoot as many targets as you can!
           </div>
         )}
         <button type="button" onClick={() => startGame()}>
